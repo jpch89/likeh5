@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签3-select</title>
+</head>
+<body>
+<!--
+select 标签
+作用：用于定义下拉列表
+格式：
+<select>
+    <optgroup label="分组">
+        <option>待选内容</option>
+    </optgroup>
+</select>
+与datalist的区别：
+select本身就是一个列表，不用绑定给输入框
+select不能直接输入内容
+注意：
+1. 下拉列表不能直接输入内容，但是可以直接在列表中选择内容
+2. 默认把列表中第一条数据作为默认值
+3. 可以通过给option标签添加selected="selected"来设定默认值
+4. 可以给option标签包一层optgroup标签指定数据分组，通过label="分组名"来指定分组名
+-->
+
+<select>
+    <optgroup label="第一组">
+        <option>北京</option>
+        <option selected="selected">上海</option>
+        <option>广州</option>
+        <option>深圳</option>
+    </optgroup>
+    <optgroup label="第二组">
+        <option>重庆</option>
+        <option>天津</option>
+    </optgroup>
+</select>
+</body>
+</html>
