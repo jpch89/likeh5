@@ -8,20 +8,44 @@
             margin: 0;
             padding: 0;
         }
-        div{
-            border: 1px solid #000000;
-        }
-        p{
-            width: 50px;
-            height: 50px;
+        .box1{
             background-color: red;
-            /*float: left;*/
+            /*这里*/
+            height: 50px;
+        }
+        .box2{
+            background-color: purple;
+        }
+        ul{
+            list-style: none;
+        }
+        .ul01 li{
+            background-color: blue;
+        }
+        .ul02 li{
+            background-color: green;
+        }
+        ul li{
+            float: left;
         }
     </style>
 </head>
 <body>
 <div>
-    <p></p>
+    <div class="box1">
+        <ul class="ul01">
+            <li>大娃</li>
+            <li>二娃</li>
+            <li>三娃</li>
+        </ul>
+    </div>
+    <div class="box2">
+        <ul class="ul02">
+            <li>李南江</li>
+            <li>极客江南</li>
+            <li>江哥</li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
