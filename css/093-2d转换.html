@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2d转换</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 800px;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+        ul li{
+            list-style: none;
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        ul li:nth-child(2){
+            /* deg 是单位，代表多少度 */
+            /* 正数为顺时针 */
+            transform: rotate(45deg);
+        }
+        ul li:nth-child(3){
+            /*
+            第一个参数：水平方向平移像素
+            第二个参数：垂直方向平移像素
+             */
+            transform: translate(100px, 0px);
+        }
+        ul li:nth-child(4){
+            /*
+            第一个参数：水平方向缩放倍数
+            第二个参数：垂直方向缩放倍数
+            注意点：
+            如果取值是 1，代表不变
+            如果取值大于 1，代表需要放大
+            如果取值小于 1，代表需要缩小
+            如果水平和垂直缩放都一样，那么可以简写为一个参数
+             */
+            transform: scale(1.5, 1);
+        }
+        ul li:nth-child(5){
+            /*
+            注意点：
+            1. 如果需要进行多个转换，用空格隔开
+            2. 2D 的转换模块会修改元素的坐标系，所以旋转之后再平移就不是水平、垂直平移了
+             */
+            transform: rotate(30deg) translate(100px, 0) scale(1.5, 1.5);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>正常的</li>
+    <li>旋转的</li>
+    <li>平移的</li>
+    <li>缩放的</li>
+    <li>综合的</li>
+</ul>
+</body>
+</html>

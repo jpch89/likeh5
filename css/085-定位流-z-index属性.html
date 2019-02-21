@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index属性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .f1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+        }
+        .f2{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: relative;
+            z-index: 3;
+        }
+        .s1{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 200px;
+            top: 200px;
+            z-index: 2;
+        }
+        .s2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            left: 250px;
+            top: 50px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="f1">
+    <div class="s1"></div>
+</div>
+<div class="f2">
+    <div class="s2"></div>
+</div>
+</body>
+</html>

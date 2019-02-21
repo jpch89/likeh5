@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D转换模块</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 1px solid #000;
+            margin: 100px auto;
+            perspective: 500px;
+            /* 转到 90deg 就不见了，没有厚度 */
+            transform: rotateY(0deg);
+            transform-style: preserve-3d;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 1px solid #000;
+            margin: 0 auto;
+            margin-top: 50px;
+            transform: rotateY(45deg)
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

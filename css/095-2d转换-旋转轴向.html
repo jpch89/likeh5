@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2d转换-旋转轴向</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            perspective: 500px;
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: 1px solid #000;
+        }
+        ul li img{
+            width: 200px;
+            height: 200px;
+        }
+        ul li:nth-child(1){
+            /*
+            默认情况下所有元素都是围绕 Z 轴进行旋转
+             */
+            transform: rotateZ(45deg);
+        }
+        ul li:nth-child(2){
+            transform: rotateX(45deg);
+        }
+        ul li:nth-child(3){
+            /*
+            总结：
+            想围绕哪个轴旋转，那么只需要在 rotate 后面加上该轴的大写字母即可
+             */
+            transform: rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="img/rotateZ.jpg" alt=""></li>
+    <li><img src="img/rotateX.jpg" alt=""></li>
+    <li><img src="img/rotateY.jpg" alt=""></li>
+</ul>
+</body>
+</html>

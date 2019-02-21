@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡模块其他属性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            /* 告诉系统，哪个属性需要执行过渡效果 */
+            transition-property: width;
+            /* 告诉系统过渡效果持续的时长 */
+            transition-duration: 5s;
+            /* 告诉系统延迟多少秒之后才开始过渡动画 */
+            transition-delay: 1s
+        }
+        div:hover{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

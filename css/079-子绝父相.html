@@ -24,6 +24,21 @@
         }
         ul li:nth-of-type(4){
             background-color: yellow;
+            position: relative;
+        }
+        ul>li>img{
+            /*position: relative;*/
+            /*left: -42px;*/
+            /*top: -18px;*/
+
+            /*position: absolute;*/
+            /*left: 526px;*/
+            /*top: 90px;*/
+
+            position: absolute;
+            left: 50%;
+            top: -10px;
+            margin-left: -12px;
         }
     </style>
 </head>
@@ -32,7 +47,10 @@
     <li>服装城</li>
     <li>美妆馆</li>
     <li>京东超市</li>
-    <li>全球购</li>
+    <li>
+        全球购
+        <img src="img/hot.png" alt="" width="24" height="19">
+    </li>
     <li>闪购</li>
     <li>团购</li>
     <li>拍卖</li>
