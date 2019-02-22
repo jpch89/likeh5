@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>111-3D播放器上</title>
+    <title>112-3D播放器下</title>
     <style>
         *{
             margin: 0;
@@ -11,7 +11,6 @@
         body{
             background: url("img/jacky/bg.jpg") no-repeat;
             background-size: cover;
-            overflow: hidden;
         }
         ul{
             width: 200px;
@@ -25,12 +24,6 @@
             transform: rotateX(-10deg);
             animation: sport 6s linear 0s infinite normal;
         }
-        ul:hover{
-            animation-play-state: paused;
-        }
-        ul:hover li img{
-            opacity: 0.5;
-        }
         ul li{
             list-style: none;
             width: 200px;
@@ -41,10 +34,6 @@
             position: absolute;
             left: 0;
             top: 0;
-            background-color: black;
-        }
-        ul li:hover img{
-            opacity: 1;
         }
         ul li:nth-child(1){
             /*background-color: green;*/
@@ -89,47 +78,6 @@
                 transform: rotateX(-10deg) rotateY(360deg);
             }
         }
-        .heart{
-            width: 173px;
-            height: 157px;
-            position: absolute;
-            left: 100px;
-            bottom: 100px;
-            animation: move 5s linear 0s infinite normal;
-        }
-        @keyframes move {
-            0%{
-                left: 100px;
-                bottom: 100px;
-                opacity: 1;
-            }
-            20%{
-                left: 300px;
-                bottom: 400px;
-                opacity: 0;
-            }
-            40%{
-                left: 500px;
-                bottom: 700px;
-                opacity: 1;
-            }
-            60%{
-                left: 800px;
-                bottom: 300px;
-                opacity: 0;
-            }
-            80%{
-                left: 1200px;
-                bottom: 100px;
-                opacity: 1;
-
-            }
-            100%{
-                left: 800px;
-                bottom: -200px;
-                opacity: 0;
-            }
-        }
     </style>
 </head>
 <body>
@@ -141,7 +89,5 @@
     <li><img src="img/jacky/5.jpg" alt=""></li>
     <li><img src="img/jacky/6.jpg" alt=""></li>
 </ul>
-<img src="img/jacky/xin.png" class="heart">
-<audio src="img/jacky/music.mp3" autoplay="autoplay" loop="loop"></audio>
 </body>
 </html>
