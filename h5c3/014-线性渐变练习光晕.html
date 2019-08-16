@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>014-线性渐变练习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+        }
+
+        div {
+            width: 600px;
+            height: 200px;
+            line-height: 200px;
+            font-size: 150px;
+            font-weight: bold;
+            border: 1px solid red;
+            margin: 200px auto;
+            /* color: red; */
+            background: linear-gradient(-45deg, transparent 100px, white 150px, white 180px, transparent 220px);
+            /* 渐变就相当于背景图片，可以定位 */
+            background-image: linear-gradient(-45deg, transparent 100px, white 150px, white 180px, transparent 220px);
+            background-position: -450px 0;
+            background-repeat: no-repeat;
+
+            /* background: skyblue; */
+            color: rgba(255, 255, 255, 0.3);
+            /*
+                -webkit-background-clip: text;
+                将背景裁剪为文字的形状
+                注意点：-webkit-background-clip 是一个私有属性，并不是所有的浏览器都能识别
+                这种方式在业界上统称：识别码、前缀
+                -ms 代表ie内核识别码
+                -moz 代表火狐firefox内核识别码
+                -webkit 代表谷歌chrome、苹果safari内核识别码
+                -o代表欧朋opera内核识别码
+             */
+            -webkit-background-clip: text;
+            transition: all 5s;
+        }
+
+        div:hover {
+            background-position: 450px 0;
+        }
+    </style>
+</head>
+<body>
+    <div>塔克工业</div>
+</body>
+</html>
