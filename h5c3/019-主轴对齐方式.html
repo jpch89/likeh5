@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伸缩布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+            /*
+                flex-direction: row; 是主轴起点的默认值
+                justify-content: flex-start; 主轴上伸缩项对齐的默认值
+            */
+            flex-direction: row;
+            justify-content: flex-start;
+
+            /* 与主轴终点对齐 */
+            /* 注意与 flex-direction: row-reverse; 顺序不同 */
+            justify-content: flex-end;
+
+            /* 与主轴中点对齐 */
+            justify-content: center;
+
+            /* 两端对齐 */
+            /* (伸缩容器主轴宽度 - 伸缩项宽度) / (伸缩项个数 - 1) */
+            /* 把上面计算出来的空间放到伸缩项之间 */
+            justify-content: space-between;
+
+            /* 两端留白的两端对齐 */
+            /* (伸缩容器主轴宽度 - 伸缩项宽度) / (伸缩项个数 * 2) */
+            /* 左右两端填充上面计算出来的一个宽度，伸缩项之间填充两个宽度 */
+            justify-content: space-around;
+        }
+
+        ul>li {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            background: red;
+        }
+
+        ul>li:nth-child(2) {
+            background: green;
+        }
+
+        ul>li:nth-child(3) {
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+
+</html>

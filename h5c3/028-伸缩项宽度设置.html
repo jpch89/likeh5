@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伸缩布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 600px;
+            height: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+        }
+
+        ul>li {
+            /* width: 100px; */
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        ul>li:nth-child(1) {
+            background: red;
+            /*
+                1. 在伸缩布局中可以通过 flex-basis 属性设置伸缩项的宽度
+                注意点：flex-basis 只有在伸缩布局中才有效
+                2. 在伸缩布局中，如果通过 flex-basis 设置了宽度，那么再通过 width 设置宽度就会无效。
+                也就是说，flex-basis 的优先级要高于 width 的优先级
+                经测试，连 !important 也无法覆盖。
+                3. 在伸缩布局中，如果同时通过 flex-basis 和 width 设置了宽度，
+                而且一个设置的是 auto，另一个设置的是具体的值，那么会按照具体的值来显示，
+                并且与前后顺序无关。
+            */
+            /* flex-basis: 100px; */
+
+            /* width: 200px; */
+            /* width: auto; */
+
+            /* width: 200px; */
+            /* flex-basis: auto; */
+
+            width: auto;
+            flex-basis: 300px;
+
+            flex-basis: 300px;
+            width: auto;
+        }
+
+        ul>li:nth-child(2) {
+            background: green;
+        }
+
+        ul>li:nth-child(3) {
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+
+</html>
