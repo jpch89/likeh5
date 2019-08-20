@@ -1,0 +1,10 @@
+/*背景开始*/
+video{
+    width: 100%;
+    height: 1080px;
+    object-fit: cover;
+    background: red;
+}
+/*背景结束*/
+
+
