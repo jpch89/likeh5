@@ -1,0 +1,347 @@
+body {
+       /* 字体大小/行高 */
+    font: 12px/1.5em "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+    color: #999;
+    background: #f2f2f2;
+}
+
+/* 头部工具条开始 */
+.toolbar {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background: #f5f5f5;
+}
+
+/* .toolbar>.toolbar-in {
+    width: 1190px;
+    height: 100%;
+    margin: 0 auto;
+} */
+
+.toolbar-in>ul>li {
+    height: 100%;
+    float: left;
+    margin: 0 10px;
+}
+
+.toolbar-in>ul>li:first-child {
+    margin-left: 0;
+}
+
+.toolbar-in>ul>li:last-child {
+    margin-right: 0;
+}
+
+.toolbar-in>ul>li>a {
+    color: #666666;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.toolbar-in>ul>li>a>i {
+    /* 给行内元素添加transform属性是无效的，必须改为行内块级或者块级元素才有效 */
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.toolbar-in>ul>li>a:hover i {
+    transform: rotateZ(-180deg);
+}
+/* 头部工具条结束 */
+
+/* 头部开始 */
+.header {
+    width: 100%;
+    height: 148px;
+    background: #fff;
+}
+
+/* .header>.header-in {
+    width: 1190px;
+    height: 100%; 
+    margin: 0 auto;
+} */
+
+.header-in>.header-top {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: left;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.header-top .logo {
+    width: 190px;
+    height: 90px;
+}
+
+.header-top .ad {
+    width: 160px;
+    height: 100px;
+}
+
+.header-top .search form {
+    margin-top: 30px;
+    position: relative;
+}
+
+.header-top .search input[type=text] {
+    width: 420px;
+    height: 44px;
+    border: 2px solid #f90;
+    box-sizing: border-box;
+    padding-left: 28px;
+    outline: none;
+}
+
+.header-top .search input[type=submit] {
+    width: 120px;
+    height: 44px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #f90;
+    border: none;
+    outline: none;
+}
+
+.header-top .search i {
+    font-size: 20px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+
+
+.header-top .search>ul>li {
+    float: left;
+    color: rgba(204, 204, 204, 1);
+    margin: 0 5px;
+    margin-top: 5px;
+}
+
+.header-top .search>ul>li>a {
+    color: rgba(204, 204, 204, 1);
+}
+
+.header-in>.header-bottom {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-bottom>p {
+    width: 190px;
+    height: 100%;
+    color: #fff;
+    background: #f90;
+}
+.header-bottom>p>a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.header-bottom>p>a>i {
+    margin: 0 5px;
+    
+}
+
+.header-bottom>ul>li {
+    float: left;
+    margin: 0 13px;
+    position: relative;
+}
+
+.header-bottom>ul>li a {
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-bottom>ul>li a:hover {
+    color: #f90;
+}
+
+.header-bottom>ul>li i {
+    display: inline-block;
+    width: 14px;
+    height: 17px;
+    background: url(../images/icons.png) no-repeat;
+    background-position: -345px -213px;
+    position: absolute;
+    right: -15px;
+    top: -5px;
+}
+
+.header-bottom>ul>li span {
+    width: 25px;
+    height: 8px;
+    background: url("../images/icons.png") no-repeat;
+    background-position: -37px 0;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    transition: all 0.5s;
+}
+
+.header-bottom>ul>li:hover span {
+    display: inline-block;
+    bottom: 0; 
+}
+/* 头部结束 */
+
+/* banner开始 */
+.banner {
+    width: 100%;
+    height: 482px;
+    background: deeppink;
+}
+
+.banner>.banner-in {
+    /* width: 1190px;
+    height: 100%;
+    margin: 0 auto; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-in>.banner-left {
+    width: 190px;
+    height: 100%;
+    background: #333;
+}
+
+.banner-left li {
+    margin: 0 10px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.banner-left li>a {
+    font-size: 13px;
+    color: #fff;
+    margin: 0 2px;
+}
+
+.banner-left li>a:hover {
+    color: #f90;
+}
+
+.banner-in>.banner-center {
+    width: 830px;
+    height: 100%;
+    background: pink;
+    position: relative;
+}
+
+.banner-center>.banner-background {
+
+}
+
+.banner-center>.banner-background>img {
+    vertical-align: bottom;
+}
+
+.banner-center>.banner-background p {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.banner-center>.banner-background span {
+    width: 30px;
+    height: 64px;
+    background: url("../images/icons.png") no-repeat;
+    background-position: -82px -145px;
+}
+
+.banner-center>.banner-background span:nth-child(2) {
+    background-position: -120px -145px;
+}
+
+.banner-center>.banner-background ol {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 323px;
+}
+
+.banner-center>.banner-background ol>li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons.png") no-repeat;
+    background-position: -26px -100px;
+    margin: 0 4px;
+}
+
+.banner-center>.banner-background ol>li:first-child {
+    background-position: 0 -100px;
+}
+
+.banner-center>.banner-foreground {
+    width: 816px;
+    height: 122px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
+}
+
+.banner-center>.banner-foreground li {
+    width: 202px;
+    height: 112px;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.banner-center>.banner-foreground h3 {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(239, 65, 36);
+}
+
+.banner-center>.banner-foreground p {
+    font-size: 14px;
+}
+
+.banner-center>.banner-foreground img {
+    float: right;
+    margin-top: -20px;
+}
+
+.banner-in>.banner-right {
+    width: 170px;
+    height: 100%;
+    background: skyblue;
+}
+
+.banner-right>.right-top {
+    width: 100%;
+    height: 169px;
+    background: #fff;
+}
+.banner-right>.right-middle {
+    width: 100%;
+    height: 166px;
+    background: deepskyblue;
+}
+.banner-right>.right-bottom {
+    width: 100%;
+    height: 147px;
+    background: darkgoldenrod;
+}
+/* banner结束 */
